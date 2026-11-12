@@ -1,0 +1,93 @@
+STUDENT MANAGEMENT REST API – INPUT AND OUTPUT
+
+1. ADD STUDENT (POST)
+
+URL: http://localhost:8080/students
+
+Input:
+{
+  "name": "Satyam",
+  "email": "satyam@example.com"
+}
+
+Output:
+{
+  "id": 1,
+  "name": "Satyam",
+  "email": "satyam@example.com"
+}
+
+
+2. GET ALL STUDENTS (GET)
+
+URL: http://localhost:8080/students
+
+Input: No input required.
+
+Output:
+[
+  {
+    "id": 1,
+    "name": "Satyam",
+    "email": "satyam@example.com"
+  }
+]
+
+
+3. GET STUDENT BY ID (GET)
+
+URL: http://localhost:8080/students/1
+
+Input: Student ID = 1
+
+Output:
+{
+  "id": 1,
+  "name": "Satyam",
+  "email": "satyam@example.com"
+}
+
+
+4. UPDATE STUDENT (PUT)
+
+URL: http://localhost:8080/students/1
+
+Input:
+{
+  "name": "Satyam Garg",
+  "email": "satyamgarg@example.com"
+}
+
+Output:
+{
+  "id": 1,
+  "name": "Satyam Garg",
+  "email": "satyamgarg@example.com"
+}
+
+
+5. DELETE STUDENT (DELETE)
+
+URL: http://localhost:8080/students/1
+
+Input: Student ID = 1
+
+Output:
+Status: 200 OK
+Response Body: Empty
+
+
+6. VERIFY DELETION (GET)
+
+URL: http://localhost:8080/students
+
+Input: No input required.
+
+Output:
+[]
+
+
+RESULT:
+Student Management REST API operations for adding, retrieving,
+updating, and deleting student records were successfully implemented
+using Spring Boot and REST APIs.
